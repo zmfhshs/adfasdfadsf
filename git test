@@ -1,1 +1,623 @@
 
+#include <stdio.h> 
+
+int main(){ 
+
+   int money=0; 
+
+   int price=0; 
+
+   int menu=0; 
+
+   int number=0; 
+
+   int coke = 700; 
+
+   int cider = 700; 
+
+   int vacas = 500; 
+
+   int vita500 = 600; 
+
+   int orange = 1000; 
+
+   int lemon = 800; 
+
+   int apple = 800; 
+
+   int macole = 600; 
+
+    
+
+   int coke_amount = 15; 
+
+   int cider_amount = 15; 
+
+   int vacas_amount = 15; 
+
+   int vita500_amount = 15; 
+
+   int orange_amount = 10; 
+
+   int lemon_amount = 10; 
+
+   int apple_amount = 10; 
+
+   int macole_amount = 10; 
+
+    
+
+    
+
+    
+
+   while(1){ 
+
+       printf("============판매 목록=============\n"); 
+
+       printf("1.콜라(700원)   재고 : %d \n", coke_amount); 
+
+       printf("2.사이다(700원)   재고 : %d \n", cider_amount); 
+
+       printf("3.박카스(500원)   재고 : %d \n", vacas_amount); 
+
+       printf("4.비타500(600원)   재고 : %d \n", vita500_amount); 
+
+       printf("5.오렌지 주스(1000원)   재고 : %d \n", orange_amount); 
+
+       printf("6.레몬주스(800원)   재고 : %d \n", lemon_amount); 
+
+       printf("7.사과주스(800원)   재고 : %d \n", apple_amount); 
+
+       printf("8.맥콜(600원)   재고 : %d \n", macole_amount); 
+
+       printf("=================================\n"); 
+
+       printf("재고 초기화는 9를 눌러주세요.\n"); 
+
+       printf("종료를 원하시면 0을 눌러주세요.\n"); 
+
+       printf("=================================\n"); 
+
+       printf("메뉴번호를 입력해주세요. >>"); 
+
+       scanf("%d", &menu); 
+
+       puts(""); 
+
+        
+
+       if(menu == 0){ 
+
+           break; 
+
+       } 
+
+       switch (menu){ 
+
+               case 1: 
+
+               printf("콜라를 선택하셨습니다. 수량을 선택해주세요. >>"); 
+
+               scanf("%d", &number); 
+
+               if (number > coke_amount){ 
+
+                   printf("선택한 수량이 재고 보다 많습니다.\n"); 
+
+               } 
+
+               else if(number>=1 && number <= coke_amount){ 
+
+                   price = number*coke; 
+
+                   printf("%d개를 선택하셨습니다. 가격은 %d입니다.\n", number, price); 
+
+                   printf("돈을 투입해주세요.>> "); 
+
+                   money = 0; 
+
+                   scanf("%d",&money); 
+
+        
+
+                   if(money<price){ 
+
+                       printf("돈이 부족합니다.\n"); 
+
+                   } 
+
+                   else if(money >=price){ 
+
+                   printf("구매 해주셔서 감사합니다. 잔돈은%d입니다.\n",money - price); 
+
+                   coke_amount = coke_amount-number; 
+
+                   } 
+
+               } 
+
+               else if(number <=0){ 
+
+                   printf("선택한 수량이 너무 적습니다.\n"); 
+
+                   }    
+
+                   break; 
+
+               case 2: 
+
+                    printf("사이다를 선택하셨습니다. 수량을 선택해주세요. >>"); 
+
+               scanf("%d", &number); 
+
+                   if (number > cider_amount){ 
+
+                   printf("선택한 수량이 재고 보다 많습니다.\n"); 
+
+               } 
+
+                   else if(number>=1 && number <= cider_amount){ 
+
+                   price = number*cider; 
+
+                   printf("%d개를 선택하셨습니다. 가격은 %d입니다.\n", number, price); 
+
+                   printf("돈을 투입해주세요.>> "); 
+
+                   money = 0; 
+
+                   scanf("%d",&money); 
+
+        
+
+                   if(money<price){ 
+
+                       printf("돈이 부족합니다.\n"); 
+
+                   } 
+
+               else if(money >=price){ 
+
+                   printf("구매 해주셔서 감사합니다. 잔돈은%d입니다.\n",money - price); 
+
+                   cider_amount=cider_amount-number; 
+
+                   } 
+
+               } 
+
+               else if(number <=0){ 
+
+                   printf("선택한 수량이 너무 적습니다.\n"); 
+
+                  
+
+               } 
+
+                   break; 
+
+               case 3: 
+
+               printf("박카스를 선택하셨습니다. 수량을 선택해주세요. >>"); 
+
+               scanf("%d", &number); 
+
+               if (number > vacas_amount){ 
+
+                   printf("선택한 수량이 재고 보다 많습니다.\n"); 
+
+                    
+
+               } 
+
+               else if(number>=1 && number <= vacas_amount){ 
+
+                   price = number*vacas; 
+
+                   printf("%d개를 선택하셨습니다. 가격은 %d입니다.\n", number, price); 
+
+                   printf("돈을 투입해주세요.>> "); 
+
+                   money = 0; 
+
+                   scanf("%d",&money); 
+
+        
+
+                   if(money<price){ 
+
+                       printf("돈이 부족합니다.\n"); 
+
+               } 
+
+                   else if(money >=price){ 
+
+                       printf("구매 해주셔서 감사합니다. 잔돈은%d입니다.\n",money - price); 
+
+                       vacas_amount=vacas_amount-number; 
+
+                   } 
+
+               } 
+
+               else if(number <=0){ 
+
+                   printf("선택한 수량이 너무 적습니다.\n"); 
+
+                  
+
+               } 
+
+                   break; 
+
+               case 4: 
+
+               printf("비타500을 선택하셨습니다. 수량을 선택해주세요. >>"); 
+
+               scanf("%d", &number); 
+
+               if (number > vita500_amount){ 
+
+                   printf("선택한 수량이 재고 보다 많습니다.\n"); 
+
+                    
+
+               } 
+
+               else if(number>=1 && number <= vita500_amount){ 
+
+                   price = number*vita500; 
+
+                   printf("%d개를 선택하셨습니다. 가격은 %d입니다.\n", number, price); 
+
+                   printf("돈을 투입해주세요.>> "); 
+
+                   money = 0; 
+
+                   scanf("%d",&money); 
+
+        
+
+                   if(money<price){ 
+
+                       printf("돈이 부족합니다.\n"); 
+
+                   } 
+
+                   else if(money >=price){ 
+
+                       printf("구매 해주셔서 감사합니다. 잔돈은%d입니다.\n",money - price); 
+
+                       vita500_amount=vita500_amount-number; 
+
+                       break; 
+
+                   } 
+
+               } 
+
+               else if(number <=0){ 
+
+                   printf("선택한 수량이 너무 적습니다.\n"); 
+
+                  
+
+               } 
+
+                   break; 
+
+               case 5: 
+
+               printf("오랜지 주스를 선택하셨습니다. 수량을 선택해주세요. >>"); 
+
+               scanf("%d", &number); 
+
+               if (number > orange_amount){ 
+
+                   printf("선택한 수량이 재고 보다 많습니다.\n"); 
+
+                    
+
+               } 
+
+               else if(number>=1 && number <= orange_amount){ 
+
+                   price = number*orange; 
+
+                   printf("%d개를 선택하셨습니다. 가격은 %d입니다.\n", number, price); 
+
+                  printf("돈을 투입해주세요.>> "); 
+
+                   money = 0; 
+
+                   scanf("%d",&money); 
+
+        
+
+                   if(money<price){ 
+
+                       printf("돈이 부족합니다.\n"); 
+
+               } 
+
+                   else if(money >=price){ 
+
+                       printf("구매 해주셔서 감사합니다. 잔돈은%d입니다.\n",money - price); 
+
+                       orange_amount=orange_amount-number; 
+
+                       break; 
+
+               } 
+
+               } 
+
+               else if(number <=0){ 
+
+                   printf("선택한 수량이 너무 적습니다.\n"); 
+
+                  
+
+               } 
+
+                   break; 
+
+               case 6: 
+
+               printf("레몬주스를 선택하셨습니다. 수량을 선택해주세요. >>"); 
+
+               scanf("%d", &number); 
+
+               if (number > lemon_amount){ 
+
+                   printf("선택한 수량이 재고 보다 많습니다.\n"); 
+
+                    
+
+               } 
+
+               else if(number>=1 && number <= lemon_amount){ 
+
+                   price = number*lemon; 
+
+                   printf("%d개를 선택하셨습니다. 가격은 %d입니다.\n", number, price); 
+
+                   printf("돈을 투입해주세요.>> "); 
+
+                   money = 0; 
+
+                   scanf("%d",&money); 
+
+        
+
+                   if(money<price){ 
+
+                       printf("돈이 부족합니다.\n"); 
+
+               } 
+
+                   else if(money >=price){ 
+
+                       printf("구매 해주셔서 감사합니다. 잔돈은%d입니다.\n",money - price); 
+
+                       lemon_amount=lemon_amount-number; 
+
+                       break; 
+
+               } 
+
+               } 
+
+               else if(number <=0){ 
+
+                   printf("선택한 수량이 너무 적습니다.\n"); 
+
+                  
+
+               } 
+
+                   break; 
+
+               case 7: 
+
+               printf("사과주스를 선택하셨습니다. 수량을 선택해주세요. >>"); 
+
+               scanf("%d", &number); 
+
+               if (number > apple_amount){ 
+
+                   printf("선택한 수량이 재고 보다 많습니다.\n"); 
+
+                    
+
+               } 
+
+               else if(number>=1 && number <= apple_amount){ 
+
+                   price = number*apple; 
+
+                   printf("%d개를 선택하셨습니다. 가격은 %d입니다.\n", number, price); 
+
+                   printf("돈을 투입해주세요.>> "); 
+
+                   money = 0; 
+
+                   scanf("%d",&money); 
+
+        
+
+                   if(money<price){ 
+
+                       printf("돈이 부족합니다.\n"); 
+
+               } 
+
+                   else if(money >=price){ 
+
+                       printf("구매 해주셔서 감사합니다. 잔돈은%d입니다.\n",money - price); 
+
+                       apple_amount=apple_amount-number; 
+
+                       break; 
+
+               } 
+
+               else if(number <=0){ 
+
+                   printf("선택한 수량이 너무 적습니다.\n"); 
+
+                  
+
+               } 
+
+                   break; 
+
+               case 8: 
+
+               printf("맥콜을 선택하셨습니다. 수량을 선택해주세요. >>"); 
+
+               scanf("%d", &number); 
+
+               if (number > macole_amount){ 
+
+                   printf("선택한 수량이 재고 보다 많습니다.\n"); 
+
+                   break; 
+
+               } 
+
+               else if(number>=1 && number <= macole_amount){ 
+
+                   price = number*macole; 
+
+                   printf("%d개를 선택하셨습니다. 가격은 %d입니다.\n", number, price); 
+
+                   macole_amount=macole_amount-number; 
+
+                   printf("돈을 투입해주세요.>> "); 
+
+                   money = 0; 
+
+                   scanf("%d",&money); 
+
+        
+
+                   if(money<price){ 
+
+                   printf("돈이 부족합니다.\n"); 
+
+                   break; 
+
+                   } 
+
+                   else if(money >=price){ 
+
+                       printf("구매 해주셔서 감사합니다. 잔돈은%d입니다.\n",money - price); 
+
+                       macole_amount=macole_amount-number; 
+
+                       break; 
+
+                        
+
+                   } 
+
+                   case 9:  
+
+                    
+
+                   printf("초기화되었습니다.\n\n"); 
+
+                   coke_amount = 15; 
+
+                   cider_amount = 15; 
+
+                   vacas_amount = 15; 
+
+                   vita500_amount = 15; 
+
+                   orange_amount = 10; 
+
+                   lemon_amount = 10; 
+
+                   apple_amount = 10; 
+
+                   macole_amount = 10; 
+
+                    
+
+                    
+
+                        
+
+                    
+
+                        
+
+                   } 
+
+            
+
+               else if(number <=0){ 
+
+                   printf("선택한 수량이 너무 적습니다.\n"); 
+
+                   break; 
+
+               } 
+
+                   break; 
+
+               default: 
+
+               printf("없는 메뉴 입니다. 다시 입력해주세요.\n"); 
+
+       } 
+
+            
+
+        
+
+                
+
+                
+
+    
+
+            
+
+        
+
+       } 
+
+    
+
+   }  
+
+    
+
+} 
+
+    
+
+    
+
+    
+
+      
+
+    
+
+        
+
+    
+
+    
+
+    
+
+    
+
+ 
+ 
